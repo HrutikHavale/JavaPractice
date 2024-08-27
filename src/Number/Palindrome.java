@@ -1,3 +1,5 @@
+package Number;
+
 public class Palindrome {
     public static void main(String[] args) {
         int a = 12215;

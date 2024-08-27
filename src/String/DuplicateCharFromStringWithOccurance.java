@@ -1,7 +1,9 @@
+package String;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class DuplicateCharactersWithOccurance {
+public class DuplicateCharFromStringWithOccurance {
 
     public static void main(String[] args) {
         String str = "My name is Hrutik kumar";
@@ -13,15 +15,15 @@ public class DuplicateCharactersWithOccurance {
         char[] ch = str.toCharArray();
         HashMap<Character,Integer> hm = new HashMap<>();
 
-//        for (int i=0;i<ch.length;i++){
-        for (char c: ch){
-            if (c==' '){
-                continue;
-            } if (hm.containsKey(c)){
-                hm.put(c,hm.get(c)+1);
+       for (int i=0;i<ch.length;i++){
+           if (ch[i]==' '){
+               continue;
+           }
+       if (hm.containsKey(ch[i])){
+                hm.put(ch[i],hm.get(ch[i])+1);
             }
             else {
-                hm.put(c,1);
+                hm.put(ch[i],1);
             }
         }
         for(Map.Entry<Character,Integer> entry:hm.entrySet()){

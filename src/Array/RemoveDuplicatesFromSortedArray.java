@@ -1,3 +1,5 @@
+package Array;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -28,6 +30,7 @@ public class RemoveDuplicatesFromSortedArray {
                 arr[i]=arr[j];
             }
         }
+
         return i+1;
     }
 }

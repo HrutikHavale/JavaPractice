@@ -1,4 +1,4 @@
-package recursion;
+package Array;
 
 public class ReverseAnArray {
     public static void main(String[] args) {
