@@ -23,7 +23,6 @@ public class ArraySearchOperation {
                  return mid;
             else if(arr[mid]<x)
                 low=mid+1;
-
             else
                 high=mid-1;
         }

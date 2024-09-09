@@ -38,7 +38,6 @@ public class Divisors {
                 arr[count++]=i;
             }
         }
-
         return arr;
     }
 }

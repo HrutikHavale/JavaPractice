@@ -6,7 +6,7 @@ import java.util.List;
 public class ReverseWordsinaString {
     public static void main(String[] args) {
         String s="  hello world  ";
-        //System.out.println(reverseWords(s));
+       // System.out.println(reverseWords(s));
        // reverseWords(s);
 //        System.out.println(reverseWords1(s));
         System.out.println(reverseWords2(s));
@@ -57,7 +57,7 @@ public class ReverseWordsinaString {
 
         for (char c : s.toCharArray()) {
             if (c == ' ') {
-                if (temp.length() > 0) {
+                if (!temp.isEmpty()) {  //or temp.length() > 0
                     tempWords.add(temp.toString());
                     temp = new StringBuilder();
                 }
@@ -66,9 +66,9 @@ public class ReverseWordsinaString {
             }
         }
 
-        if (temp.length() > 0) {
-            tempWords.add(temp.toString());
-        }
+//        if (!temp.isEmpty()) {
+//            tempWords.add(temp.toString());
+//        }
 
         for (int i = tempWords.size() - 1; i > 0; i--) {
             res.append(tempWords.get(i)).append(" ");

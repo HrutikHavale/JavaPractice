@@ -12,19 +12,22 @@ public class DuplicateCharactersWithOccurance {
 
     public static void duplicateChar(String str){
 
-        char[] ch = str.toCharArray();
+        char[] ch = str.toLowerCase().toCharArray();
+                  //str.toCharArray();
         HashMap<Character,Integer> hm = new HashMap<>();
 
 //        for (int i=0;i<ch.length;i++){
         for (char c: ch){
             if (c==' '){
                 continue;
-            } if (hm.containsKey(c)){
-                hm.put(c,hm.get(c)+1);
             }
-            else {
-                hm.put(c,1);
-            }
+//            if (hm.containsKey(c)){
+//                hm.put(c,hm.get(c)+1);
+//            }
+//            else {
+//                hm.put(c,1);
+//            }
+            hm.put(c,hm.getOrDefault(c,0)+1);
         }
         for(Map.Entry<Character,Integer> entry:hm.entrySet()){
             if(entry.getValue()>1){

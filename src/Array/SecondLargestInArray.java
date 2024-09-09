@@ -30,9 +30,12 @@ public class SecondLargestInArray {
             if (arr[i]>max){
                 secMax=max;
                 max=arr[i];
-            } else if (arr[i]<max&&arr[i]>secMax) {
+            } else if (arr[i]!=max&&arr[i]>secMax) {
                 secMax=arr[i];
             }
+        }
+        if (secMax==0){
+            secMax=-1;
         }
         System.out.println(max+"   "+secMax);
     }

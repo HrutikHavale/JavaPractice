@@ -6,7 +6,7 @@ public class Pattern {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter row number");
         int n = sc.nextInt();
-        patternPrint11(n);
+        patternPrint2(n);
 
     }
 
